@@ -1,10 +1,15 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
+$telegram- > useGetUpdatesWithoutDatabase ();
+
+$bot->run();
+
 $result = Request::sendMessage([
     'chat_id' => $chat_id,
     'text'    => 'Your utf8 text 😜 ...',
 ]);
+
 ?>
 
 
