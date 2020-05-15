@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$result = $telegram->GetUpdatesW();
+$result = $telegram->GetUpdates();
 
 echo $result;
 
