@@ -1,4 +1,23 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
+$bot_api_key  = '1238595732:AAFgb41Yn2mrvWB27F1HjPbfEyY6P3JBM9I';
+$bot_username = 'My15052020bot';
+$hook_url     = 'https://bot15052020.herokuapp.com/hook.php';
+
+try {
+    // Create Telegram API object
+    $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
+
+    // Set webhook
+    $result = $telegram->setWebhook($hook_url);
+    if ($result->isOk()) {
+        echo $result->getDescription();
+    }
+} catch (Longman\TelegramBot\Exception\TelegramException $e) {
+    // log telegram errors
+    // echo $e->getMessage();
+}
 
 // $data = file_get_contents(__DIR__.'/log.txt',true);
 
@@ -14,69 +33,8 @@
 <head>
 	<title>Test Slider</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="carosel.js"></script>
 </head>
 <body>
-<div class="wrapper">
-  <input checked type=radio name="slider" id="slide1" />
-  <input type=radio name="slider" id="slide2" />
-  <input type=radio name="slider" id="slide3" />
-  <input type=radio name="slider" id="slide4" />
-  <input type=radio name="slider" id="slide5" />
 
-  <div class="slider-wrapper">
-    <div class=inner>
-      <article>
-        <div class="info top-left">
-          <h3>Malacca</h3></div>
-        <img src="https://farm9.staticflickr.com/8059/28286750501_dcc27b1332_h_d.jpg" />
-      </article>
-
-      <article>
-        <div class="info bottom-right">
-          <h3>Cameron Highland</h3></div>
-        <img src="https://farm6.staticflickr.com/5812/23394215774_b76cd33a87_h_d.jpg" />
-      </article>
-
-      <article>
-        <div class="info bottom-left">
-          <h3>New Delhi</h3></div>
-        <img src="https://farm8.staticflickr.com/7455/27879053992_ef3f41c4a0_h_d.jpg" />
-      </article>
-
-      <article>
-        <div class="info top-right">
-          <h3>Ladakh</h3></div>
-        <img src="https://farm8.staticflickr.com/7367/27980898905_72d106e501_h_d.jpg" />
-      </article>
-
-      <article>
-        <div class="info bottom-left">
-          <h3>Nubra Valley</h3></div>
-        <img src="https://farm8.staticflickr.com/7356/27980899895_9b6c394fec_h_d.jpg" />
-      </article>
-    </div>
-    <!-- .inner -->
-  </div>
-  <!-- .slider-wrapper -->
-
-  <div class="slider-prev-next-control">
-    <label for=slide1></label>
-    <label for=slide2></label>
-    <label for=slide3></label>
-    <label for=slide4></label>
-    <label for=slide5></label>
-  </div>
-  <!-- .slider-prev-next-control -->
-
-  <div class="slider-dot-control">
-    <label for=slide1></label>
-    <label for=slide2></label>
-    <label for=slide3></label>
-    <label for=slide4></label>
-    <label for=slide5></label>
-  </div>
-  <!-- .slider-dot-control -->
-</div>
 </body>
 </html>
