@@ -1,9 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$result = $telegram->GetUpdates();
-
-echo $result;
 
 ?>
 
@@ -15,6 +12,6 @@ echo $result;
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<h1>Большая надпись</h1>
 </body>
 </html>
