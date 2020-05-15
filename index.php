@@ -5,21 +5,6 @@ use TelegramBot\TelegramBotManager\BotManager;
 // Load composer.
 require_once __DIR__ . '/vendor/autoload.php';
 
-try {
-    $bot = new BotManager([
-        // Vitals!
-        'api_key'      => '1238595732:AAFgb41Yn2mrvWB27F1HjPbfEyY6P3JBM9I',
-        'bot_username' => 'My15052020bot',
-        'webhook'      => [
-            'url' => 'https://bot15052020.herokuapp.com/hook.php',
-        ]
-    ]);
-
-    $bot->run();
-
-} catch (\Exception $e) {
-    echo $e->getMessage() . PHP_EOL;
-}
 
 
 // $result = Request::sendMessage([
