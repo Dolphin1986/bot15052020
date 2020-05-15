@@ -1,4 +1,5 @@
 <?php
+// Load composer
 require __DIR__ . '/vendor/autoload.php';
 
 $bot_api_key  = '1238595732:AAFgb41Yn2mrvWB27F1HjPbfEyY6P3JBM9I';
