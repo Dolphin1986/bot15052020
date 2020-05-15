@@ -9,11 +9,9 @@ try {
     $bot = new BotManager([
         // Vitals!
         'api_key'      => '1238595732:AAFgb41Yn2mrvWB27F1HjPbfEyY6P3JBM9I',
-
-        // Extras.
         'bot_username' => 'My15052020bot',
         'webhook'      => [
-            'url' => 'https://bot15052020.herokuapp.com/index.php',
+            'url' => 'https://bot15052020.herokuapp.com/hook.php',
         ]
     ]);
 
