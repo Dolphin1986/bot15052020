@@ -1,9 +1,14 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
 
-$telegram -> useGetUpdatesWithoutDatabase ();
 
 $bot->run();
+
+$telegram -> useGetUpdatesWithoutDatabase();
+
+$hook_url = __DIR__'/hook.php';
+
+$result = $telegram->setWebhook($hook_url);
 
 $result = Request::sendMessage([
     'chat_id' => $chat_id,
