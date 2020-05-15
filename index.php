@@ -12,23 +12,22 @@ try {
 
         // Extras.
         'bot_username' => 'My15052020bot',
-        'secret'       => 'super_secret',
         'webhook'      => [
             'url' => 'https://bot15052020.herokuapp.com/index.php',
         ]
     ]);
 
     $bot->run();
-    
+
 } catch (\Exception $e) {
     echo $e->getMessage() . PHP_EOL;
 }
 
 
-$result = Request::sendMessage([
-    'chat_id' => $chat_id,
-    'text'    => 'Your utf8 text 😜 ...',
-]);
+// $result = Request::sendMessage([
+//     'chat_id' => $chat_id,
+//     'text'    => 'Your utf8 text 😜 ...',
+// ]);
 
 ?>
 
